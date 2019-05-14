@@ -6,17 +6,13 @@ const VideoPlayer = props => {
 			<div className="video-player">
 				<video
 					controls
+					autoPlay
 					src={
-						'http://localhost:3000/api/video/' + props.selectedMovie
+						'http://ec2-52-198-63-55.ap-northeast-1.compute.amazonaws.com/api/video/' +
+						props.selectedMovie
 					}
-				>
-					Sorry, your browser doesn't support embedded videos, but
-					don't worry, you can{' '}
-					<a href="https://archive.org/details/BigBuckBunny_124">
-						download it
-					</a>
-					and watch it with your favorite video player!
-				</video>
+					type='video/x-matroska; codecs="a_ac3, avc"'
+				/>
 			</div>
 		)
 	);
